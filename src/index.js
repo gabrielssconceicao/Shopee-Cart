@@ -1,17 +1,25 @@
-import * as cartService from './service/cart.js';
-import createItem from './service/item.js';
+import * as cartService from "./services/cart.js";
+import createItem from "./services/item.js";
 
+const myCart = [];
+const myWhishList = [];
 
-const cart = []
-const whishlist = []
+console.log("Welcome to the your Shopee Cart!");
 
-console.log("Welcome to your Shopee-Cart!");
+//criando dois itens
+const item1 = await createItem("hotwheels ferrari", 20.99, 1);
+const item2 = await createItem("hotwheels lamborghini", 39.99, 3);
 
-const item1 = await createItem("Hotwheels Ferrari",20.99,1)
-const item2 = await createItem("Hotwheels Lamborghini",39.99,3)
-await cartService.addItem(cart,item1)
-await cartService.addItem(cart,item2)
+// adicionei dois itens ao carrinho
+await cartService.addItem(myCart, item1);
+await cartService.addItem(myCart, item2);
 
+await cartService.removeItem(myCart, item2);
+await cartService.removeItem(myCart, item2);
+await cartService.removeItem(myCart, item2);
 
-console.log(item1.subtotal())
-console.log(await cartService.calculateTotaL(cart))
+await cartService.displaycart(myCart);
+// deletei dois itens do carrinho
+// await cartService.deleteItem(myCart, item2.name);
+// await cartService.deleteItem(myCart, item1.name);
+await cartService.calculateTotal(myCart);
