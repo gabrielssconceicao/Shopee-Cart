@@ -1,0 +1,21 @@
+{
+  "name": "shopee-cart",
+  "version": "1.0.0",
+  "description": "A Shopping cart created during DIO's bootcamp",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabrielssconceicao/Shopee-Cart.git"
+  },
+  "keywords": [],
+  "author": "Gabriel Conceição",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gabrielssconceicao/Shopee-Cart/issues"
+  },
+  "homepage": "https://github.com/gabrielssconceicao/Shopee-Cart#readme"
+}
